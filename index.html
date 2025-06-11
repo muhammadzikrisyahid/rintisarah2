@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rintis Arah</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">RINTIS ARAH</h1>
+    <div class="controls">
+      <select id="languageSelect">
+        <option value="id">Bahasa Indonesia</option>
+        <option value="en">English</option>
+      </select>
+      <button id="toggleTheme">🌙 / ☀️</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Menjelajahi Alam, Menemukan Arah</h2>
+      <p>Bersama komunitas pecinta alam dan pendaki gunung.</p>
+    </section>
+
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Cari informasi gunung..." />
+      <button onclick="searchGallery()">Cari</button>
+    </section>
+
+    <section class="gallery-section">
+      <h3>Galeri Gunung</h3>
+      <div class="gallery">
+        <div class="gallery-item" onclick="openSlider('merbabu')">
+          <img src="images/merbabu/1.jpg" alt="Merbabu">
+          <p>Merbabu</p>
+        </div>
+        <div class="gallery-item" onclick="openSlider('ciremai')">
+          <img src="images/ciremai/1.jpg" alt="Ciremai">
+          <p>Ciremai</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sliderModal" class="slider-modal">
+      <span class="close" onclick="closeSlider()">&times;</span>
+      <div class="slider-content" id="sliderContent"></div>
+    </section>
+
+    <section class="info-section">
+      <div class="info-card">
+        <h3>Simaksi Gunung</h3>
+        <input type="text" id="simaksiInput" placeholder="Nama gunung..." />
+        <button onclick="cariSimaksi()">Cek Harga</button>
+        <p id="simaksiResult"></p>
+      </div>
+      <div class="info-card">
+        <h3>Cek Cuaca</h3>
+        <input type="text" id="weatherInput" placeholder="Nama kota..." />
+        <button onclick="cekCuaca()">Cek Cuaca</button>
+        <p id="weatherResult"></p>
+      </div>
+    </section>
+
+    <section class="visi-misi-section">
+      <h3>Visi</h3>
+      <p>Menginspirasi generasi muda agar mencintai dan menjaga alam Indonesia.</p>
+      <h3>Misi</h3>
+      <ul>
+        <li>Menyelenggarakan kegiatan edukatif dan ekspedisi alam.</li>
+        <li>Mendokumentasikan keindahan alam untuk pelestarian.</li>
+        <li>Membangun komunitas peduli lingkungan.</li>
+      </ul>
+    </section>
+
+    <section class="map-section">
+      <h3>Peta Lokasi</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63398.89540706655!2d110.4351384022708!3d-7.455030269467183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a81f98d7b1ae9%3A0x34e647eae2d4c940!2sGunung%20Merbabu!5e0!3m2!1sid!2sid!4v1718127100000!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p id="visitorCount">Jumlah pengunjung: 0</p>
+    <p>© 2025 Rintis Arah</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
